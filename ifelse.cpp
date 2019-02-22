@@ -63,7 +63,6 @@
 bool enemyInFront;
 bool isBoss;
 int robotHealth;
-
 // Код Васи
 bool shouldFire = true;
 if (enemyInFront == true)
@@ -78,7 +77,6 @@ else
 {
 shouldFire = false;
 }
-
 if(shouldFire)
 {
 cout << "Fire" << endl;
@@ -188,7 +186,6 @@ true true 60			Fire
 /* Задание 5
 Написать логику, которая проверяет возможность существования даты по введенным пользователем данных.
 Пользователь вводит данные в формате день, месяц, год.
-
 Тестовые данные				Ожидаемый результат
 1 1 1992					true
 30 6 1992					true
@@ -254,7 +251,6 @@ true true 60			Fire
 может ли ферзь попасть с первой клетки на вторую одним ходом.
 Клетки нумеруются с 1. Пользователь вводит координаты начальной и конечной клетки в формате x1x2.
 x1 - номер клетки по горизонтали, x2 - номер клетки по вертикали
-
 Тестовые данные				Ожидаемый результат
 54 14						true
 11 88						true
@@ -264,5 +260,50 @@ x1 - номер клетки по горизонтали, x2 - номер клетки по вертикали
 */
 int main()
 {
-
+	int xs, ys, xf, yf;
+	int num;
+	std::cin >> num;
+	xs = num / 10;
+	ys = num % 10;
+	std::cin >> num;
+	xf = num / 10;
+	yf = num % 10;
+	int difx, dify;
+	difx = xf - xs;
+	dify = yf - ys;
+	bool var;
+	if (difx == 0)
+	{
+		if(dify ==0)
+		{
+			var=false;
+		}
+		else
+		{
+			var=true;
+		}
+	}
+	else
+	{
+		if (dify == 0)
+		{
+			var=true;
+		}
+		else
+		{
+			var=false;
+		}
+	}
+	if((difx == dify) || (difx == -dify))
+	{
+		var = true;
+	}
+	if (var == true)
+	{
+		std::cout << "true";
+	}
+	else
+	{
+		std::cout << "false";
+	}
 }
