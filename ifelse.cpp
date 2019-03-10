@@ -17,7 +17,7 @@
 //	std::cin >> a;
 //	std::cin >> b;
 //	std::cin >> c;
-//	if ((a + b > c)&&(c+b>a)&&(c+a>b)&&(a-b<c)&&(a-c<b)&&(b-c<a)&&(b-a<c)&&(c-a<b)&&(c-b<a))
+//	if ((a + b > c)&&(c+b>a)&&(c+a>b))
 //	{
 //		std::cout << "Да";
 //	}
@@ -40,15 +40,27 @@
 //int main()
 //{
 //	setlocale(LC_ALL, "");
-//	int num;
+//	int num,chek;
 //	std::cin >> num;
+//	chek = num;
 //	num = num % 10;
 //	switch (num)
 //	{
-//	case 1:
+//	case 1:if(chek==11)
+//	{
+//		std::cout << "рублей";
+//		break;
+//	}
 //		std::cout << "рубль";
 //		break;
 //		case 2:
+//		case 4:
+//		case 3:
+//			if((chek>10)&&(chek<20))
+//			{
+//				std::cout << "рублей";
+//				break;
+//			}
 //			std::cout << "рубля";
 //			break;
 //		default:
@@ -65,9 +77,9 @@ bool isBoss;
 int robotHealth;
 // Код Васи
 bool shouldFire = true;
-if (enemyInFront == true)
+if (enemyInFront )
 {
-if (isBoss == true)
+if (isBoss )
 {
 if (robotHealth < 50) shouldFire = false;
 if (robotHealth > 100) shouldFire = true;
@@ -97,9 +109,9 @@ true true 60			Fire
 //	int health;
 //	std::cin >> health;
 //	fire = true;
-//	if (enemy == true)
+//	if (enemy)
 //	{
-//		if (boss == true)
+//		if (boss)
 //		{
 //			if (health < 50)
 //			{
@@ -111,7 +123,7 @@ true true 60			Fire
 //	{
 //		fire = false;
 //	}
-//	if (fire == true)
+//	if (fire)
 //	{
 //		std::cout << "Fire";
 //	}
@@ -145,15 +157,15 @@ true true 60			Fire
 //	c1 = num1 > num2;
 //	c2 = num1 > num3;
 //	c3 = num2 > num3;
-//	if (c3 == 1)
+//	if (num2 > num3)
 //	{
-//		if (c1 == 1)
+//		if (num1 > num2)
 //		{
 //			std::cout << num2;
 //		}
 //		else
 //		{
-//			if (c2 == 1)
+//			if (num1 > num3)
 //			{
 //				std::cout << num1;
 //			}
@@ -165,13 +177,13 @@ true true 60			Fire
 //	}
 //	else
 //	{
-//		if (c2 == 1)
+//		if (num1 > num3)
 //		{
 //			std::cout << num3;
 //		}
 //		else
 //		{
-//			if (c1 == 1)
+//			if (num1 > num2)
 //			{
 //				std::cout << num1;
 //			}
@@ -231,12 +243,12 @@ true true 60			Fire
 //				}
 //				break;
 //	}
-//	if ((leap == 1)&&(month==2))
+//	if ((leap)&&(month==2))
 //	{
 //		daymax = 29;
 //	}
 //	res = (day<=daymax) && (month <= 12);
-//	if (res == 1)
+//	if (res)
 //	{
 //		std::cout << "true";
 //	}
@@ -258,52 +270,52 @@ x1 - номер клетки по горизонтали, x2 - номер клетки по вертикали
 18 71						false
 23 67						true
 */
-int main()
-{
-	int xs, ys, xf, yf;
-	int num;
-	std::cin >> num;
-	xs = num / 10;
-	ys = num % 10;
-	std::cin >> num;
-	xf = num / 10;
-	yf = num % 10;
-	int difx, dify;
-	difx = xf - xs;
-	dify = yf - ys;
-	bool var;
-	if (difx == 0)
-	{
-		if(dify ==0)
-		{
-			var=false;
-		}
-		else
-		{
-			var=true;
-		}
-	}
-	else
-	{
-		if (dify == 0)
-		{
-			var=true;
-		}
-		else
-		{
-			var=false;
-		}
-	}
-	if((difx == dify) || (difx == -dify))
-	{
-		var = true;
-	}
-	if (var == true)
-	{
-		std::cout << "true";
-	}
-	else
-	{
-		std::cout << "false";
-	}
-}
+//int main()
+//{
+//	int xs, ys, xf, yf;
+//	int num;
+//	std::cin >> num;
+//	xs = num / 10;
+//	ys = num % 10;
+//	std::cin >> num;
+//	xf = num / 10;
+//	yf = num % 10;
+//	int difx, dify;
+//	difx = xf - xs;
+//	dify = yf - ys;
+//	bool var;
+//	if (!dif == 0)
+//	{
+//		if(!dify)
+//		{
+//			var=false;
+//		}
+//		else
+//		{
+//			var=true;
+//		}
+//	}
+//	else
+//	{
+//		if (!dify)
+//		{
+//			var=true;
+//		}
+//		else
+//		{
+//			var=false;
+//		}
+//	}
+//	if((difx == dify) || (difx == -dify))
+//	{
+//		var = true;
+//	}
+//	if (var )
+//	{
+//		std::cout << "true";
+//	}
+//	else
+//	{
+//		std::cout << "false";
+//	}
+//}
