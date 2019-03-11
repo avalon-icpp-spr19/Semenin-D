@@ -68,17 +68,28 @@ int size = line.size();		// функция возвращает длину ст�
 #.#.#
 .#.#.
 #.#.#*/
-int main()
+/*int main()
 {
-	int num;
+	int num,chek;
 	std::cin >> num;
+	chek = 0;
 	for (int i = 0; i < num; ++i)
 	{
 		for (int j = 0; j < num; ++j)
 		{
-
+			if (chek % 2 == 0)
+			{
+				std::cout << "#";
+				chek += 1;
+			}
+			else
+			{
+				std::cout << ".";
+				chek += 1;
+			}
 		}
-		std::cout << std:: endl;
+		std::cout << std::endl;
+		
 	}
 }
 /*Задание 4
@@ -92,14 +103,70 @@ N = 2
 ###
 #
 N = 4
-#
-###
-#####
+   #
+  ###
+ #####
 #######
-#####
-###
-#
-Задание 5 (дополнительно)
+ #####
+  ###
+   #
+   */
+int main()
+{
+	int len,num;
+	std::cin >> num;
+	if (!(num == 1))
+	{
+		len = 1 + (2 * (num - 1));
+	}
+	else
+	{
+		len = 1;
+	}
+	int chek;
+	chek = (len-1) / 2;
+	for (int i = 0; i < len/2; ++i)
+	{
+		
+			for (int m=0;m < chek;++m)
+			{
+				std::cout << " ";
+			}
+			for (int j=0;j<len-chek*2;++j)
+			{
+				std::cout << "#";
+			}
+			for (int m=0;m < chek;++m)
+			{
+				std::cout << " ";
+			}
+			if (chek > 0)
+			{
+				--chek;
+			}
+		std::cout << std:: endl;
+	}
+	for (int i = 0; i <= len / 2; ++i)
+	{
+
+		for (int m = 0;m < chek;++m)
+		{
+			std::cout << " ";
+		}
+		for (int j = 0;j < len - chek * 2;++j)
+		{
+			std::cout << "#";
+		}
+		for (int m = 0;m < chek;++m)
+		{
+			std::cout << " ";
+		}
+
+		++chek;
+		std::cout << std::endl;
+	}
+} 
+/*Задание 5 (дополнительно)
 Определите симметрично ли введенное пользователем число N
 Тестовые данные			Ожидаемый результат
 1				Да
@@ -109,3 +176,17 @@ N = 4
 12344321			Да
 456123				Нет
 */
+/*int main()
+{
+	int num;
+	std::cin >> num;
+	bool res;
+	int len;
+	for (int i = 0;i <= len;++i)
+	{
+		if (num)
+		{
+
+		}
+	}
+}*/
