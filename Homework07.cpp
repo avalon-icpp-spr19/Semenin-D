@@ -119,6 +119,18 @@ int data[] = {1,2,3,4,5};
 d				4
 z				26
 !				-1*/
+/*const char data[] = "abcdefghijklmnopqrstuvwxyz";
+int main()
+{
+	int res=-1;
+	char letter;
+	std::cin >> letter;
+	//int *ptr = [0] ;
+	for (int i = 0; i < 26; ++i)
+	{
+
+	}
+}*/
 /*
 Задание №5
 Написать программу, которая сравнивает две строки, которые вводит пользователь.
@@ -134,3 +146,22 @@ char line[256];
 cin.getline(line, 256);
 }
 */
+int main()
+{
+	char line1[256];
+	std::cin.getline(line1, 256);
+	char line2[256];
+	std::cin.getline(line2, 256);
+	char *ptr1 = line1;
+	char *ptr2 = line2;
+	int n = 1;
+	while ((*ptr1 != '\0') || (*ptr2 != '\0'))
+	{
+		if (*ptr1 != *ptr2)
+		{
+			n = 0;
+		}
+		++ptr1;
+		++ptr2;
+	}
+}
