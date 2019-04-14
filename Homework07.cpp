@@ -22,26 +22,26 @@ const long long ll = 123LL;
 */
 /*int main()
 {
-	int val = 10;
-	std::cout << &val << std::endl;
-	int *ptr = &val;
-	std::cout << *ptr << std::endl;
-	unsigned int a = 5U;
-	unsigned int *pa = &a;
-	std::cout << sizeof(pa);
-	double b = 0.8;
-	double *pb = &b;
-	std::cout << sizeof(pb);
-	const float f = 0.5F;
-	const float *pf = &f;
-	std::cout << sizeof(pf);
-	const long long ll = 123LL;
-	const long long *pll = &ll;
-	std::cout << sizeof(pll);
-	*pa = *pa++;
-	*pb = 0.25;
-	std::cout << *pf * 2;
-	std::cout << *pll % 10;
+int val = 10;
+std::cout << &val << std::endl;
+int *ptr = &val;
+std::cout << *ptr << std::endl;
+unsigned int a = 5U;
+unsigned int *pa = &a;
+std::cout << sizeof(pa);
+double b = 0.8;
+double *pb = &b;
+std::cout << sizeof(pb);
+const float f = 0.5F;
+const float *pf = &f;
+std::cout << sizeof(pf);
+const long long ll = 123LL;
+const long long *pll = &ll;
+std::cout << sizeof(pll);
+*pa = *pa++;
+*pb = 0.25;
+std::cout << *pf * 2;
+std::cout << *pll % 10;
 }*/
 /*Задание №2
 Что выведет на экран следующий код? -1
@@ -63,19 +63,19 @@ int data[] = {1,2,3,4,5};
 Выведите полученный результат.*/
 /*int main()
 {
-	int data[] = { 1,2,3,4,5 };
-	int *ptr = &data[0];
-	for (int i = 0; i < 5; ++i)
-	{
-		std::cout << *(ptr + i) << std::endl;
-	}
-	int summ=0;
-	for (int i = 0; i < 5; ++i)
-	{
-		*(ptr + i) = *(ptr + i) * 2;
-		summ += *(ptr + i);
-	}
-	std::cout << summ;
+int data[] = { 1,2,3,4,5 };
+int *ptr = &data[0];
+for (int i = 0; i < 5; ++i)
+{
+std::cout << *(ptr + i) << std::endl;
+}
+int summ=0;
+for (int i = 0; i < 5; ++i)
+{
+*(ptr + i) = *(ptr + i) * 2;
+summ += *(ptr + i);
+}
+std::cout << summ;
 }*/
 /*Заданий №3
 1.	Сгенерировать массив из 20 рандомных элементов из диапазона [-100, 100].
@@ -87,27 +87,27 @@ int data[] = {1,2,3,4,5};
 */
 /*int main()
 {
-	int arr[20];
-	for (int i = 0; i < 20; ++i)
-	{
-		arr[i] = ext::GetRandomValue(-100, 100);
-	}
-	int *ptr = &arr[4];
-	ptr = ptr - 4;
-	for (int i = 0; i < 20; ++i)
-	{
-		std::cout << *(ptr + i) << std::endl;
-	}
-	int *max = ptr;
-	for (int i = 0; i < 5; ++i)
-	{
-		if (*(ptr + i) > *max)
-		{
-			*max = *(ptr + i);
-		}
-	}
-	std::cout << max - ptr<<std::endl;
-	std::cout << *max;
+int arr[20];
+for (int i = 0; i < 20; ++i)
+{
+arr[i] = ext::GetRandomValue(-100, 100);
+}
+int *ptr = &arr[4];
+ptr = ptr - 4;
+for (int i = 0; i < 20; ++i)
+{
+std::cout << *(ptr + i) << std::endl;
+}
+int *max = ptr;
+for (int i = 0; i < 5; ++i)
+{
+if (*(ptr + i) > *max)
+{
+*max = *(ptr + i);
+}
+}
+std::cout << max - ptr<<std::endl;
+std::cout << *max;
 }*/
 /*Задание №4
 Пусть задан некоторый символьный массив, проинициализированный строковым литералом.
@@ -122,14 +122,18 @@ z				26
 /*const char data[] = "abcdefghijklmnopqrstuvwxyz";
 int main()
 {
-	int res=-1;
-	char letter;
-	std::cin >> letter;
-	//int *ptr = [0] ;
-	for (int i = 0; i < 26; ++i)
+int res=-1;
+char letter;
+std::cin >> letter;
+for (int i = 0; i < 26; ++i)
+{
+	if (data[i] == letter)
 	{
-
+		res = i + 1;
+		break;
 	}
+}
+std::cout << res << std::endl;
 }*/
 /*
 Задание №5
@@ -146,7 +150,7 @@ char line[256];
 cin.getline(line, 256);
 }
 */
-int main()
+/*int main()
 {
 	char line1[256];
 	std::cin.getline(line1, 256);
@@ -164,4 +168,6 @@ int main()
 		++ptr1;
 		++ptr2;
 	}
+	std::cout << n << std::endl;
 }
+*/
