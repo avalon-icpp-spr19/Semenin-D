@@ -1,7 +1,7 @@
 #pragma once
 #include"Level1.hpp";
 namespace lev4
-{ 
+{
 	int sov(lev1::Date * arr, int col)
 	{
 		int n = 0;
@@ -25,21 +25,21 @@ namespace lev4
 	}
 	float test(int col, int it)
 	{
-		float percent=0;
-		int num = 0;
+		float percent = 0;
+		float num = 0;
 		for (int i = 0; i < it; ++i)
 		{
-		lev1::Date *arr = new lev1::Date[col];
-		for (int i = 0; i < col; ++i)
-		{
-			arr[i] = lev1::randomDate();
-		}
-		
+			lev1::Date *arr = new lev1::Date[col];
+			for (int j = 0; j < col; ++j)
+			{
+				arr[j] = lev1::randomDate();
+			}
+
 			num += sov(arr, col);
 			delete[] arr;
 		}
-		percent = num / col;
+		percent = num / it*100;
 		return percent;
 	}
-	
+
 }

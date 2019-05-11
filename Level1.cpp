@@ -1,35 +1,19 @@
-#include<iostream>;
+п»ї#include<iostream>;
 #include"Level1.hpp";
 #include"Random.hpp";
-#include"Level2.hpp";
 using namespace ext;
-using namespace lev2;
 using namespace lev1;
 /*int main()
 {
-	setlocale(0, " ");
-	float n;
-	std::cout << "Введите число симуляций";
-	std::cin >> n;
-	int success=0;
-	for (int i = 0; i < n; ++i)
-	{
-		success += grupp();
-	}
-	std::cout << "Хотя бы два дня рождения совпали в " << success << " симуляциях" <<
-		" Процент успешных " << success / n * 100;
-}*/
-/*int main()
+setlocale(0, " ");
+float n;
+std::cout << "Р’РІРµРґРёС‚Рµ РєРѕР»Р»РёС‡РµСЃС‚РІРѕ СЃРёРјСѓР»СЏС†РёР№";
+std::cin >> n;
+int success=0;
+for (int i = 0; i < n; ++i)
 {
-	setlocale(0, " ");
-	float n;
-	std::cout << "Введите число симуляций";
-	std::cin >> n;
-	int success = 0;
-	for (int i = 0; i < n; ++i)
-	{
-		success += threeDays();
-	}
-	std::cout << "Хотя бы три дня рождения совпали в " << success << " симуляциях" <<
-		" Процент успешных " << success / n * 100;
+success += grupp();
+}
+std::cout << "РҐРѕС‚СЏ Р±С‹ РґРІР° РґРЅСЏ СЂРѕР¶РґРµРЅРёСЏ СЃРѕРІРїР°Р»Рё РІ " << success << " СЃРёРјСѓР»СЏС†РёСЏС…СЋ" <<
+"  РџСЂРѕС†РµРЅС‚ СѓСЃРїРµС€РЅС‹С… " << success / n * 100;
 }*/

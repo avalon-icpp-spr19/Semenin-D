@@ -2,6 +2,7 @@
 #include"Random.hpp";
 namespace lev1
 {
+	
 	struct Date
 	{
 		int year;
@@ -13,11 +14,11 @@ namespace lev1
 		Date day;
 		bool res, leap;
 		res = false;
-		while (res==false)
+		while (res == false)
 		{
-			day.date =ext:: GetRandomValue(1, 31);
-			day.month =ext:: GetRandomValue(1, 12);
-			day.year =ext:: GetRandomValue(1900, 2019);
+			day.date = ext::GetRandomValue(1, 31);
+			day.month = ext::GetRandomValue(1, 12);
+			day.year = ext::GetRandomValue(1900, 2019);
 
 
 			if ((day.year % 400 == 0) || ((day.year % 4 == 0) &&
@@ -68,8 +69,8 @@ namespace lev1
 		{
 			for (int j = 0; j < 23; ++j)
 			{
-				if ((arr[i].date == arr[j].date) && (arr[i].month==arr[j].month)
-					&& (i!=j))
+				if ((arr[i].date == arr[j].date) && (arr[i].month == arr[j].month)
+					&& (i != j))
 				{
 					n = 1;
 					break;

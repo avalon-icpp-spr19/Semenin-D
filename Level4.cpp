@@ -1,29 +1,34 @@
+
 #include<iostream>
 #include"Level4.hpp";
 using namespace std;
 using namespace lev4;
 int main()
 {
-	cout << "Percent";
+	setlocale(0, "");
+	cout << "Введите желаемый процент:";
 	int per;
 	cin >> per;
-	cout << "People";
-	int men;
-	cin >> men;
-	float m=0;
-	int col = 1;
-	while (true)
+	cout << "Введите колличество симуляций:";
+	int colSim;
+	cin >> colSim;
+	float m = 0;
+	int ColMen = 1;
+	while (m<per)
 	{
-		m = test(col, men);
+		m = test(ColMen, colSim);
 		if (m >= per)
 		{
-			cout << "On " << col << "person";
-			break;
+			cout << "Указанная вероятность совпадения достигается в группе размером " << ColMen
+				<< " человек" << endl;
+			
 		}
 		else
 		{
-			cout << "On " << col << "   " << m;
+			cout << "В группе размером " << ColMen << " человек, достгается вероятность в "
+				<< m << " % " << endl;
+
 		}
-		++col;
+		++ColMen;
 	}
 }
